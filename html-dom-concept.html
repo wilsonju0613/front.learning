@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Javascript :HTML DOM 核心觀念</title>
+    </head>
+    <body>
+        <script>
+            //認識內建的windows物件
+            console.log(window);
+            //取得視窗的寬度和高度
+            console.log(window.innerWidth,window.innerHeight);
+            //透過screen物件,取得螢幕尺寸
+            console.log(window.screen.width,window.screen.height);
+            //取得網址列的內容
+            console.log(window.location.href);
+            //更改網址列的內容
+            //window.location.href="https://www.google.com/";
+            //認識document物件
+            console.log(window.document);
+            console.dir(document);
+            //取得網頁標題
+            console.log(window.document.title);
+            //更改網頁標題
+            //document.title="新的標題";
+            //取得body標籤
+            console.log(document.body);
+            //取得body標籤的內文
+            console.log(document.body.innerHTML);
+            //更改body標籤的內文
+            document.body.innerHTML="Hello HTML DOM"
+        </script>
+    </body>
+</html>
