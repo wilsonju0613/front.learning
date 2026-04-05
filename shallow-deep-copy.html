@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta charset="utf-8">
+        <title>淺拷貝 shallow copy 深拷貝 deep copy</title>
+    </head>
+    <body>
+        <script>
+            /*
+            //shallow copy
+            let a=[0,1,{x:2,Y:3}]; //兩層結構物件
+            let b=[...a];
+            b[0]=10;
+            console.log(a[0]); //不會影響
+            //pf第二層不會被拷貝
+            b[2].x=20;
+            console.log(a[2].x);//會影響
+            */
+            //deep copy
+            let a=[0,1,{x:2,y:3}];
+            let str=JSON.stringify(a); //=> let b=JSON.parse(JSON.stringify(a));
+            let b=JSON.parse(str);        
+            //證明第二層的資料 也被真正拷貝
+
+            b[2].x=20;
+            console.log(a[2].x); //不會影響所以印出2
+            </script>
+    </body>
+
+</html>
